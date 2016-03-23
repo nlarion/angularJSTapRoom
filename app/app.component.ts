@@ -24,7 +24,7 @@ export class AppComponent{
       new Keg("Bud Light", "Anheisher Busch", 10, "4%", 124, 0),
       new Keg("Coors Light", "Coors", 10, "4%", 124, 1),
       new Keg("Mirror Pond", "Deschutes", 3, "4%", 124, 2),
-      new Keg("RipStop Rye Pils", "Base Camp", 3, "4%", 124, 3)
+      new Keg("RipStop Rye Pils", "Base Camp", 3, "4%", 1, 3)
     ];
   }
   kegClicked(clickedKeg: Keg): void {
