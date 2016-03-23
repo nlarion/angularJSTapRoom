@@ -1,25 +1,6 @@
 import { Component, EventEmitter } from 'angular2/core';
-
-@Component({
-  selector: 'keg-list',
-  inputs: ['kegList'],
-  outputs: ['onKegSelect'],
-  template: `
-  <h3 *ngFor="#currentKeg of kegList"         (click)="kegClicked(currentKeg)">{{ currentKeg.name }} {{ currentKeg.brand }} $ {{ currentKeg.price }} {{ currentKeg.alcoholContent }} {{ currentKeg.pints }}
-  </h3>
-  `
-})
-export class KegListComponent {
-  public kegList: Keg[];
-  public onKegSelect: EventEmitter<any>;
-  constructor() {
-    this.onKegSelect = new EventEmitter();
-  }
-  kegClicked(clickedKeg: Keg): void {
-    console.log("child", clickedKeg);
-    this.onKegSelect.emit(clickedKeg);
-  }
-}
+import { KegListComponent } from './keg-list.component';
+import { Keg } from './keg.model';
 
 @Component({
   selector: 'my-app',
@@ -46,12 +27,6 @@ export class AppComponent{
     ];
   }
   kegClicked(clickedKeg: Keg): void {
-    console.log("parent", clickedKeg);
-  }
-}
-
-export class Keg {
-  constructor(public name: string, public brand: string, public price: number, public alcoholContent: string, public pints: number, public id: number){
-
+    console.log("parent");
   }
 }

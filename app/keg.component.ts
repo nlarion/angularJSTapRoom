@@ -5,13 +5,11 @@ import { Keg } from './keg.model';
   selector: 'keg-display',
   inputs: ['keg'],
   template: `
-  <div>
-    <h3 *ngFor="#keg of kegs" (click)="kegWasSelected(keg)">{{ keg.name }} {{ keg.brand }} $ {{ keg.price }} {{ keg.alcoholContent }} {{ keg.pints }} </h3>
-  </div>
+    <h3>{{ keg.name }}, {{ keg.brand }}</h3>
+    <ul><li> Price $ {{ keg.price }}</li><li> alcohol content: {{ keg.alcoholContent }}</li><li>  {{ keg.pints }} pints remaining</li>
   `
 })
 
 export class KegComponent {
   public keg: Keg;
-
 }
