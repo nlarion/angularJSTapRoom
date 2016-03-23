@@ -1,5 +1,7 @@
 import {Component, EventEmitter } from 'angular2/core';
 import {Keg} from './keg.model';
+import { NewKegComponent } from './new-keg.component';
+
 
 @Component({
   selector: 'edit-keg-details',
