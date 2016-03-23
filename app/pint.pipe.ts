@@ -8,20 +8,14 @@ import { Keg } from './keg.model';
 
 export class PintPipe implements PipeTransform{
   transform(input: Keg[], args){
-    console.log(args[0]);
-    console.log(args[1]);
     var desiredPintState = args[0];
-    if(desiredPintState === "Below 10 Pints"){
+    if(desiredPintState === "below10"){
       return input.filter((keg) => {
-        if(keg.pints <= 10 ){
-          return !keg.lowPints;
-        }
+        return keg.pints <= 10;
       });
     } else if (desiredPintState === "Normal"){
       return input.filter((keg) => {
-        if(keg.price >= 11){
-          return !keg.lowPints;
-        }
+        return keg.pints >= 11;
       });
     } else {
       return input;
