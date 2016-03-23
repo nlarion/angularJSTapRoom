@@ -1,5 +1,5 @@
 {
-  "name": "angular2-skeleton-app",
+  "name": "taproom-app",
   "version": "1.0.0",
   "scripts": {
     "start": "npm run tsc:w",
@@ -34,5 +34,8 @@
     "lite-server": "^2.1.0",
     "typescript": "^1.8.2",
     "typings": "^0.6.8"
-  }
+  },
+  "description": "#### This is an app built with the Angular framework.",
+  "main": "gulpfile.js",
+  "author": ""
 }
