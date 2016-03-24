@@ -26,7 +26,8 @@ import {PintPipe} from './pint.pipe';
   <keg-display *ngFor="#currentKeg of kegList | lowPrice:filterLow | lowPints:filterLowPints"
   (click)="kegClicked(currentKeg)"
   [class.selected]="currentKeg === selectedKeg"
-  [keg]="currentKeg">
+  [keg]="currentKeg"
+  [class.zBeer]="currentKeg.price < 5">
   </keg-display>
   <edit-keg-details *ngIf="selectedKeg" [keg]="selectedKeg">
   </edit-keg-details>
